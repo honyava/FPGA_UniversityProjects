@@ -1,0 +1,13 @@
+
+State Machine - |DM9000A_if|state
+Name state.TX state.RX state.RESET 
+state.RESET 0 0 0 
+state.RX 0 1 1 
+state.TX 1 0 1 
+
+State Machine - |DM9000A_if|IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state
+Name state.send state.ready state.initialize state.power_up 
+state.power_up 0 0 0 0 
+state.initialize 0 0 1 1 
+state.ready 0 1 0 1 
+state.send 1 0 0 1 

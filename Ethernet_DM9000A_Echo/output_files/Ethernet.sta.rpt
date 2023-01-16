@@ -1,0 +1,1569 @@
+TimeQuest Timing Analyzer report for Ethernet
+Wed Jan 11 16:27:35 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Output Enable Times
+ 20. Minimum Output Enable Times
+ 21. Output Disable Times
+ 22. Minimum Output Disable Times
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'clk'
+ 29. Fast Model Hold: 'clk'
+ 30. Fast Model Minimum Pulse Width: 'clk'
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Output Enable Times
+ 36. Minimum Output Enable Times
+ 37. Output Disable Times
+ 38. Minimum Output Disable Times
+ 39. Multicorner Timing Analysis Summary
+ 40. Setup Times
+ 41. Hold Times
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths
+ 49. TimeQuest Timing Analyzer Messages
+ 50. TimeQuest Timing Analyzer Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Ethernet                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; Ethernet.sdc  ; OK     ; Wed Jan 11 16:27:32 2023 ;
++---------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 14.13 MHz ; 14.13 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clk   ; -50.783 ; -2176.590     ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 7.500 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                       ;
++---------+--------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node    ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+--------------+----------------+--------------+-------------+--------------+------------+------------+
+; -50.783 ; rx_count[29] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.011     ; 70.808     ;
+; -50.672 ; rx_count[30] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.011     ; 70.697     ;
+; -50.362 ; tx_count[29] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.004     ; 70.394     ;
+; -50.123 ; tx_count[29] ; ENET_DATAo[0]  ; clk          ; clk         ; 20.000       ; 0.005      ; 70.164     ;
+; -50.069 ; tx_count[30] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.004     ; 70.101     ;
+; -49.868 ; rx_count[29] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.008     ; 69.896     ;
+; -49.857 ; tx_count[29] ; ENET_DATAo[2]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.901     ;
+; -49.830 ; tx_count[30] ; ENET_DATAo[0]  ; clk          ; clk         ; 20.000       ; 0.005      ; 69.871     ;
+; -49.825 ; tx_count[29] ; ENET_DATAo[4]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.869     ;
+; -49.757 ; rx_count[30] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.008     ; 69.785     ;
+; -49.715 ; tx_count[29] ; ENET_DATAo[5]  ; clk          ; clk         ; 20.000       ; 0.005      ; 69.756     ;
+; -49.645 ; tx_count[29] ; ENET_DATAo[1]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.689     ;
+; -49.564 ; tx_count[30] ; ENET_DATAo[2]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.608     ;
+; -49.556 ; tx_count[29] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.007     ; 69.585     ;
+; -49.532 ; tx_count[30] ; ENET_DATAo[4]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.576     ;
+; -49.492 ; rx_count[28] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.011     ; 69.517     ;
+; -49.422 ; tx_count[30] ; ENET_DATAo[5]  ; clk          ; clk         ; 20.000       ; 0.005      ; 69.463     ;
+; -49.407 ; tx_count[29] ; ENET_DATAo[3]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.451     ;
+; -49.352 ; tx_count[30] ; ENET_DATAo[1]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.396     ;
+; -49.237 ; tx_count[29] ; ENET_DATAo[13] ; clk          ; clk         ; 20.000       ; 0.009      ; 69.282     ;
+; -49.233 ; tx_count[29] ; ENET_DATAo[11] ; clk          ; clk         ; 20.000       ; 0.010      ; 69.279     ;
+; -49.229 ; tx_count[29] ; ENET_DATAo[9]  ; clk          ; clk         ; 20.000       ; 0.010      ; 69.275     ;
+; -49.221 ; tx_count[29] ; ENET_DATAo[15] ; clk          ; clk         ; 20.000       ; 0.009      ; 69.266     ;
+; -49.219 ; tx_count[29] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.004     ; 69.251     ;
+; -49.217 ; tx_count[29] ; ENET_DATAo[14] ; clk          ; clk         ; 20.000       ; 0.009      ; 69.262     ;
+; -49.114 ; tx_count[30] ; ENET_DATAo[3]  ; clk          ; clk         ; 20.000       ; 0.008      ; 69.158     ;
+; -49.080 ; tx_count[28] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.004     ; 69.112     ;
+; -49.055 ; tx_count[29] ; ENET_DATAo[12] ; clk          ; clk         ; 20.000       ; 0.010      ; 69.101     ;
+; -49.048 ; tx_count[29] ; ENET_DATAo[10] ; clk          ; clk         ; 20.000       ; 0.010      ; 69.094     ;
+; -49.041 ; tx_count[29] ; ENET_DATAo[8]  ; clk          ; clk         ; 20.000       ; 0.010      ; 69.087     ;
+; -48.958 ; tx_count[29] ; ENET_DATAo[7]  ; clk          ; clk         ; 20.000       ; 0.005      ; 68.999     ;
+; -48.944 ; tx_count[30] ; ENET_DATAo[13] ; clk          ; clk         ; 20.000       ; 0.009      ; 68.989     ;
+; -48.940 ; tx_count[30] ; ENET_DATAo[11] ; clk          ; clk         ; 20.000       ; 0.010      ; 68.986     ;
+; -48.936 ; tx_count[30] ; ENET_DATAo[9]  ; clk          ; clk         ; 20.000       ; 0.010      ; 68.982     ;
+; -48.928 ; tx_count[30] ; ENET_DATAo[15] ; clk          ; clk         ; 20.000       ; 0.009      ; 68.973     ;
+; -48.926 ; tx_count[30] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.004     ; 68.958     ;
+; -48.924 ; tx_count[30] ; ENET_DATAo[14] ; clk          ; clk         ; 20.000       ; 0.009      ; 68.969     ;
+; -48.879 ; tx_count[28] ; ENET_DATAo[6]  ; clk          ; clk         ; 20.000       ; 0.005      ; 68.920     ;
+; -48.841 ; tx_count[28] ; ENET_DATAo[0]  ; clk          ; clk         ; 20.000       ; 0.005      ; 68.882     ;
+; -48.762 ; tx_count[30] ; ENET_DATAo[12] ; clk          ; clk         ; 20.000       ; 0.010      ; 68.808     ;
+; -48.755 ; tx_count[30] ; ENET_DATAo[10] ; clk          ; clk         ; 20.000       ; 0.010      ; 68.801     ;
+; -48.748 ; tx_count[30] ; ENET_DATAo[8]  ; clk          ; clk         ; 20.000       ; 0.010      ; 68.794     ;
+; -48.665 ; tx_count[30] ; ENET_DATAo[7]  ; clk          ; clk         ; 20.000       ; 0.005      ; 68.706     ;
+; -48.577 ; rx_count[28] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.008     ; 68.605     ;
+; -48.575 ; tx_count[28] ; ENET_DATAo[2]  ; clk          ; clk         ; 20.000       ; 0.008      ; 68.619     ;
+; -48.543 ; tx_count[28] ; ENET_DATAo[4]  ; clk          ; clk         ; 20.000       ; 0.008      ; 68.587     ;
+; -48.433 ; tx_count[28] ; ENET_DATAo[5]  ; clk          ; clk         ; 20.000       ; 0.005      ; 68.474     ;
+; -48.406 ; rx_count[29] ; RX_DATA[14]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.439     ;
+; -48.406 ; rx_count[29] ; RX_DATA[12]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.439     ;
+; -48.406 ; rx_count[29] ; RX_DATA[4]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.439     ;
+; -48.406 ; rx_count[29] ; RX_DATA[6]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.439     ;
+; -48.406 ; rx_count[29] ; RX_DATA[8]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.439     ;
+; -48.406 ; rx_count[29] ; RX_DATA[2]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.439     ;
+; -48.363 ; tx_count[28] ; ENET_DATAo[1]  ; clk          ; clk         ; 20.000       ; 0.008      ; 68.407     ;
+; -48.295 ; rx_count[30] ; RX_DATA[14]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.328     ;
+; -48.295 ; rx_count[30] ; RX_DATA[12]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.328     ;
+; -48.295 ; rx_count[30] ; RX_DATA[4]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.328     ;
+; -48.295 ; rx_count[30] ; RX_DATA[6]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.328     ;
+; -48.295 ; rx_count[30] ; RX_DATA[8]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.328     ;
+; -48.295 ; rx_count[30] ; RX_DATA[2]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.328     ;
+; -48.274 ; tx_count[28] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.007     ; 68.303     ;
+; -48.187 ; rx_count[29] ; RX_DATA[15]    ; clk          ; clk         ; 20.000       ; -0.005     ; 68.218     ;
+; -48.187 ; rx_count[29] ; RX_DATA[7]     ; clk          ; clk         ; 20.000       ; -0.005     ; 68.218     ;
+; -48.171 ; rx_count[29] ; RX_DATA[10]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.204     ;
+; -48.171 ; rx_count[29] ; RX_DATA[9]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.204     ;
+; -48.171 ; rx_count[29] ; RX_DATA[11]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.204     ;
+; -48.125 ; tx_count[28] ; ENET_DATAo[3]  ; clk          ; clk         ; 20.000       ; 0.008      ; 68.169     ;
+; -48.076 ; rx_count[30] ; RX_DATA[15]    ; clk          ; clk         ; 20.000       ; -0.005     ; 68.107     ;
+; -48.076 ; rx_count[30] ; RX_DATA[7]     ; clk          ; clk         ; 20.000       ; -0.005     ; 68.107     ;
+; -48.060 ; rx_count[30] ; RX_DATA[10]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.093     ;
+; -48.060 ; rx_count[30] ; RX_DATA[9]     ; clk          ; clk         ; 20.000       ; -0.003     ; 68.093     ;
+; -48.060 ; rx_count[30] ; RX_DATA[11]    ; clk          ; clk         ; 20.000       ; -0.003     ; 68.093     ;
+; -47.981 ; rx_count[29] ; RX_DATA[3]     ; clk          ; clk         ; 20.000       ; -0.004     ; 68.013     ;
+; -47.981 ; rx_count[29] ; RX_DATA[13]    ; clk          ; clk         ; 20.000       ; -0.004     ; 68.013     ;
+; -47.981 ; rx_count[29] ; RX_DATA[1]     ; clk          ; clk         ; 20.000       ; -0.004     ; 68.013     ;
+; -47.981 ; rx_count[29] ; RX_DATA[0]     ; clk          ; clk         ; 20.000       ; -0.004     ; 68.013     ;
+; -47.981 ; rx_count[29] ; RX_DATA[5]     ; clk          ; clk         ; 20.000       ; -0.004     ; 68.013     ;
+; -47.955 ; tx_count[28] ; ENET_DATAo[13] ; clk          ; clk         ; 20.000       ; 0.009      ; 68.000     ;
+; -47.951 ; tx_count[28] ; ENET_DATAo[11] ; clk          ; clk         ; 20.000       ; 0.010      ; 67.997     ;
+; -47.947 ; tx_count[28] ; ENET_DATAo[9]  ; clk          ; clk         ; 20.000       ; 0.010      ; 67.993     ;
+; -47.939 ; tx_count[28] ; ENET_DATAo[15] ; clk          ; clk         ; 20.000       ; 0.009      ; 67.984     ;
+; -47.937 ; tx_count[28] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.004     ; 67.969     ;
+; -47.935 ; tx_count[28] ; ENET_DATAo[14] ; clk          ; clk         ; 20.000       ; 0.009      ; 67.980     ;
+; -47.870 ; rx_count[30] ; RX_DATA[3]     ; clk          ; clk         ; 20.000       ; -0.004     ; 67.902     ;
+; -47.870 ; rx_count[30] ; RX_DATA[13]    ; clk          ; clk         ; 20.000       ; -0.004     ; 67.902     ;
+; -47.870 ; rx_count[30] ; RX_DATA[1]     ; clk          ; clk         ; 20.000       ; -0.004     ; 67.902     ;
+; -47.870 ; rx_count[30] ; RX_DATA[0]     ; clk          ; clk         ; 20.000       ; -0.004     ; 67.902     ;
+; -47.870 ; rx_count[30] ; RX_DATA[5]     ; clk          ; clk         ; 20.000       ; -0.004     ; 67.902     ;
+; -47.773 ; tx_count[28] ; ENET_DATAo[12] ; clk          ; clk         ; 20.000       ; 0.010      ; 67.819     ;
+; -47.766 ; tx_count[28] ; ENET_DATAo[10] ; clk          ; clk         ; 20.000       ; 0.010      ; 67.812     ;
+; -47.759 ; tx_count[28] ; ENET_DATAo[8]  ; clk          ; clk         ; 20.000       ; 0.010      ; 67.805     ;
+; -47.676 ; tx_count[28] ; ENET_DATAo[7]  ; clk          ; clk         ; 20.000       ; 0.005      ; 67.717     ;
+; -47.613 ; rx_count[27] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.010     ; 67.639     ;
+; -47.580 ; rx_count[29] ; ENET_RD_N~reg0 ; clk          ; clk         ; 20.000       ; -0.005     ; 67.611     ;
+; -47.469 ; rx_count[30] ; ENET_RD_N~reg0 ; clk          ; clk         ; 20.000       ; -0.005     ; 67.500     ;
+; -47.343 ; tx_count[27] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.005     ; 67.374     ;
+; -47.142 ; tx_count[27] ; ENET_DATAo[6]  ; clk          ; clk         ; 20.000       ; 0.004      ; 67.182     ;
+; -47.115 ; rx_count[28] ; RX_DATA[14]    ; clk          ; clk         ; 20.000       ; -0.003     ; 67.148     ;
+; -47.115 ; rx_count[28] ; RX_DATA[12]    ; clk          ; clk         ; 20.000       ; -0.003     ; 67.148     ;
+; -47.115 ; rx_count[28] ; RX_DATA[4]     ; clk          ; clk         ; 20.000       ; -0.003     ; 67.148     ;
++---------+--------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                                                  ;
++-------+---------------------------------------------------------------------+---------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                           ; To Node                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------+---------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; clk_count[0]                                                        ; clk_count[0]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|send_flag[0]          ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|send_flag[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[8]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[8]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[7]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[4]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[5]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|flag_point[0]         ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|flag_point[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_start[0]  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_start[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[3]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.power_up           ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.power_up           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.initialize         ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.initialize         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.send               ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.send               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; RX_VALID                                                            ; RX_VALID                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[2]                                                       ; ENET_DATAo[2]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[0]                                                       ; ENET_DATAo[0]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[7]                                                       ; ENET_DATAo[7]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[6]                                                       ; ENET_DATAo[6]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[5]                                                       ; ENET_DATAo[5]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[4]                                                       ; ENET_DATAo[4]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[3]                                                       ; ENET_DATAo[3]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; tx_req                                                              ; tx_req                                                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ENET_DATAo[1]                                                       ; ENET_DATAo[1]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; data_int[1]                                                         ; data_int[1]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; data_int[0]                                                         ; data_int[0]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; rst_req                                                             ; rst_req                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|rs                       ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|rs                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[0]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[1]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|lcd_bus[1]            ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|lcd_bus[1]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.520 ; interrupt_rx[0]                                                     ; interrupt_rx[1]                                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.786      ;
+; 0.524 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_start[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.527 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[31]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[31]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; rst_front_temp                                                      ; rst_front                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.528 ; RX_DATA[6]                                                          ; dest_mac[22]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.529 ; interrupt_rx[1]                                                     ; rx_front_temp                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.529 ; RX_DATA[2]                                                          ; dest_mac[18]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.530 ; interrupt_rx[1]                                                     ; rx_front                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.531 ; clk_count[31]                                                       ; clk_count[31]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.531 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[31]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[31]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.531 ; interrupt_rx[1]                                                     ; tx_front                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.531 ; RX_DATA[0]                                                          ; dest_mac[16]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.532 ; RX_DATA[8]                                                          ; dest_mac[24]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.542 ; rst_req                                                             ; rst_trig[0]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.808      ;
+; 0.544 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.810      ;
+; 0.547 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|lcd_enable            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.813      ;
+; 0.547 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.813      ;
+; 0.553 ; state.RESET                                                         ; state.TX                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.819      ;
+; 0.554 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.initialize         ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|clk_count[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.554 ; RX_DATA[4]                                                          ; dest_mac[20]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.555 ; state.RESET                                                         ; state.RX                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.821      ;
+; 0.559 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.send               ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.ready              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.825      ;
+; 0.655 ; dest_mac[27]                                                        ; RX_DATA[11]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.660 ; rst_trig[1]                                                         ; rst_front                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.663 ; rst_trig[0]                                                         ; rst_trig[1]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.665 ; RX_DATA[11]                                                         ; dest_mac[27]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.931      ;
+; 0.667 ; RX_DATA[14]                                                         ; dest_mac[30]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.668 ; dest_mac[22]                                                        ; RX_DATA[6]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.934      ;
+; 0.669 ; RX_DATA[7]                                                          ; dest_mac[39]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.935      ;
+; 0.670 ; rst_trig[1]                                                         ; rst_front_temp                                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.936      ;
+; 0.670 ; RX_DATA[10]                                                         ; dest_mac[26]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.936      ;
+; 0.671 ; RX_DATA[13]                                                         ; dest_mac[29]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.937      ;
+; 0.671 ; RX_DATA[5]                                                          ; dest_mac[21]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.937      ;
+; 0.672 ; RX_DATA[1]                                                          ; dest_mac[17]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.938      ;
+; 0.677 ; RX_DATA[15]                                                         ; dest_mac[47]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.943      ;
+; 0.682 ; RX_DATA[3]                                                          ; dest_mac[19]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.948      ;
+; 0.751 ; rx_front_temp                                                       ; rx_front                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.017      ;
+; 0.784 ; tx_req                                                              ; state.TX                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.050      ;
+; 0.788 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|to_lcd[2]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|lcd_bus[0]            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.054      ;
+; 0.794 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[0]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[0]               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.060      ;
+; 0.795 ; clk_count[16]                                                       ; clk_count[16]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[17]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[17]               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[16]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[16]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[18]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[18]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[2]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[2]               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[0]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[0]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[16]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[16]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.797 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[9]       ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[9]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.798 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[11]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[11]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.064      ;
+; 0.798 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[29]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[29]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.064      ;
+; 0.800 ; tx_count[15]                                                        ; tx_count[15]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.800 ; rx_count[15]                                                        ; rx_count[15]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.800 ; rx_count[16]                                                        ; rx_count[16]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.800 ; dest_mac[47]                                                        ; RX_DATA[15]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.800 ; dest_mac[21]                                                        ; RX_DATA[5]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.800 ; rx_front_temp                                                       ; tx_front                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 1.066      ;
+; 0.801 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[17]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[17]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[18]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[18]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[25]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[25]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[31]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[31]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; rx_count[24]                                                        ; rx_count[24]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; dest_mac[18]                                                        ; RX_DATA[2]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[8]                ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[8]                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[30]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[30]               ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[2]       ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[2]       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[30]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[30]      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[4]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[4]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[7]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[7]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[14]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[14]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[15]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[15]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
++-------+---------------------------------------------------------------------+---------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                                                                    ;
++-------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                   ;
++-------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg9  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg9  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg1   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg1   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg2   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg2   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg3   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg3   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_we_reg        ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_we_reg        ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a10~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a10~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a11~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a11~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg1 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg1 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg2 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg2 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg3 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg3 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg4 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg4 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg5 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg5 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg6 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg6 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg7 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg7 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg8 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg8 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg9 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg9 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_we_reg       ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_we_reg       ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a13~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a13~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a14~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a14~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a15~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a15~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a1~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a1~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a2~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a2~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a3~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a3~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg9  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg9  ;
++-------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 6.629  ; 6.629  ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 5.999  ; 5.999  ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 5.570  ; 5.570  ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 4.265  ; 4.265  ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 4.795  ; 4.795  ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 6.474  ; 6.474  ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 4.304  ; 4.304  ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 5.524  ; 5.524  ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 6.629  ; 6.629  ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 4.954  ; 4.954  ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 5.034  ; 5.034  ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 5.515  ; 5.515  ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 4.612  ; 4.612  ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 4.546  ; 4.546  ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 6.125  ; 6.125  ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 4.582  ; 4.582  ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 5.484  ; 5.484  ; Rise       ; clk             ;
+; ENET_INT       ; clk        ; 20.854 ; 20.854 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; -3.416 ; -3.416 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; -4.359 ; -4.359 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; -3.665 ; -3.665 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; -4.005 ; -4.005 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; -3.979 ; -3.979 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; -3.862 ; -3.862 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; -3.925 ; -3.925 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; -3.900 ; -3.900 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; -4.546 ; -4.546 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; -3.441 ; -3.441 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; -3.675 ; -3.675 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; -3.797 ; -3.797 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; -3.416 ; -3.416 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; -3.739 ; -3.739 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; -3.451 ; -3.451 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; -4.005 ; -4.005 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; -3.725 ; -3.725 ; Rise       ; clk             ;
+; ENET_INT       ; clk        ; -4.547 ; -4.547 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; ENET_CLK       ; clk        ; 7.511 ; 7.511 ; Rise       ; clk             ;
+; ENET_CMD       ; clk        ; 8.194 ; 8.194 ; Rise       ; clk             ;
+; ENET_DATA[*]   ; clk        ; 8.616 ; 8.616 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 8.158 ; 8.158 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 8.125 ; 8.125 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 8.076 ; 8.076 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 8.066 ; 8.066 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 8.318 ; 8.318 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 8.404 ; 8.404 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 8.616 ; 8.616 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 8.295 ; 8.295 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 8.412 ; 8.412 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 7.600 ; 7.600 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 7.396 ; 7.396 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 7.867 ; 7.867 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 7.927 ; 7.927 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 7.657 ; 7.657 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 7.897 ; 7.897 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 7.857 ; 7.857 ; Rise       ; clk             ;
+; ENET_RD_N      ; clk        ; 9.336 ; 9.336 ; Rise       ; clk             ;
+; ENET_WR_N      ; clk        ; 8.376 ; 8.376 ; Rise       ; clk             ;
+; LCD_DATA[*]    ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
+;  LCD_DATA[0]   ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+;  LCD_DATA[1]   ; clk        ; 7.077 ; 7.077 ; Rise       ; clk             ;
+;  LCD_DATA[2]   ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
+;  LCD_DATA[3]   ; clk        ; 7.097 ; 7.097 ; Rise       ; clk             ;
+;  LCD_DATA[4]   ; clk        ; 6.934 ; 6.934 ; Rise       ; clk             ;
+;  LCD_DATA[5]   ; clk        ; 6.921 ; 6.921 ; Rise       ; clk             ;
+; LCD_EN         ; clk        ; 7.103 ; 7.103 ; Rise       ; clk             ;
+; LCD_RS         ; clk        ; 6.936 ; 6.936 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; ENET_CLK       ; clk        ; 7.511 ; 7.511 ; Rise       ; clk             ;
+; ENET_CMD       ; clk        ; 8.194 ; 8.194 ; Rise       ; clk             ;
+; ENET_DATA[*]   ; clk        ; 7.396 ; 7.396 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 8.158 ; 8.158 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 8.125 ; 8.125 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 8.076 ; 8.076 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 8.066 ; 8.066 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 8.318 ; 8.318 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 8.404 ; 8.404 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 8.616 ; 8.616 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 8.295 ; 8.295 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 8.412 ; 8.412 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 7.600 ; 7.600 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 7.396 ; 7.396 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 7.867 ; 7.867 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 7.927 ; 7.927 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 7.657 ; 7.657 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 7.897 ; 7.897 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 7.857 ; 7.857 ; Rise       ; clk             ;
+; ENET_RD_N      ; clk        ; 9.336 ; 9.336 ; Rise       ; clk             ;
+; ENET_WR_N      ; clk        ; 8.376 ; 8.376 ; Rise       ; clk             ;
+; LCD_DATA[*]    ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+;  LCD_DATA[0]   ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+;  LCD_DATA[1]   ; clk        ; 7.077 ; 7.077 ; Rise       ; clk             ;
+;  LCD_DATA[2]   ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
+;  LCD_DATA[3]   ; clk        ; 7.097 ; 7.097 ; Rise       ; clk             ;
+;  LCD_DATA[4]   ; clk        ; 6.934 ; 6.934 ; Rise       ; clk             ;
+;  LCD_DATA[5]   ; clk        ; 6.921 ; 6.921 ; Rise       ; clk             ;
+; LCD_EN         ; clk        ; 7.103 ; 7.103 ; Rise       ; clk             ;
+; LCD_RS         ; clk        ; 6.936 ; 6.936 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Output Enable Times                                                        ;
++----------------+------------+--------+------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 9.799  ;      ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 10.932 ;      ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 10.932 ;      ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 10.711 ;      ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 10.711 ;      ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 10.483 ;      ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 10.483 ;      ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 10.245 ;      ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 9.799  ;      ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 11.457 ;      ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 11.452 ;      ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 11.223 ;      ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 11.223 ;      ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 11.233 ;      ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 11.233 ;      ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 11.192 ;      ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 11.192 ;      ; Rise       ; clk             ;
++----------------+------------+--------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Output Enable Times                                                ;
++----------------+------------+--------+------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 9.799  ;      ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 10.932 ;      ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 10.932 ;      ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 10.711 ;      ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 10.711 ;      ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 10.483 ;      ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 10.483 ;      ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 10.245 ;      ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 9.799  ;      ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 11.457 ;      ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 11.452 ;      ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 11.223 ;      ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 11.223 ;      ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 11.233 ;      ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 11.233 ;      ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 11.192 ;      ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 11.192 ;      ; Rise       ; clk             ;
++----------------+------------+--------+------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Output Disable Times                                                               ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; Data Port      ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 9.799     ;           ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 10.932    ;           ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 10.932    ;           ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 10.711    ;           ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 10.711    ;           ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 10.483    ;           ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 10.483    ;           ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 10.245    ;           ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 9.799     ;           ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 11.457    ;           ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 11.452    ;           ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 11.223    ;           ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 11.223    ;           ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 11.233    ;           ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 11.233    ;           ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 11.192    ;           ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 11.192    ;           ; Rise       ; clk             ;
++----------------+------------+-----------+-----------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                       ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; Data Port      ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 9.799     ;           ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 10.932    ;           ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 10.932    ;           ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 10.711    ;           ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 10.711    ;           ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 10.483    ;           ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 10.483    ;           ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 10.245    ;           ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 9.799     ;           ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 11.457    ;           ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 11.452    ;           ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 11.223    ;           ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 11.223    ;           ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 11.233    ;           ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 11.233    ;           ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 11.192    ;           ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 11.192    ;           ; Rise       ; clk             ;
++----------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clk   ; -10.178 ; -400.536      ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 7.500 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                       ;
++---------+--------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node    ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+--------------+----------------+--------------+-------------+--------------+------------+------------+
+; -10.178 ; rx_count[29] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.011     ; 30.199     ;
+; -10.127 ; rx_count[30] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.011     ; 30.148     ;
+; -10.014 ; tx_count[29] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.004     ; 30.042     ;
+; -9.928  ; tx_count[29] ; ENET_DATAo[0]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.965     ;
+; -9.882  ; tx_count[30] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.004     ; 29.910     ;
+; -9.858  ; tx_count[29] ; ENET_DATAo[4]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.898     ;
+; -9.839  ; tx_count[29] ; ENET_DATAo[2]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.879     ;
+; -9.822  ; rx_count[29] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.009     ; 29.845     ;
+; -9.796  ; tx_count[30] ; ENET_DATAo[0]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.833     ;
+; -9.771  ; rx_count[30] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.009     ; 29.794     ;
+; -9.769  ; tx_count[29] ; ENET_DATAo[5]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.806     ;
+; -9.751  ; tx_count[29] ; ENET_DATAo[1]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.791     ;
+; -9.726  ; tx_count[30] ; ENET_DATAo[4]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.766     ;
+; -9.720  ; tx_count[29] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.006     ; 29.746     ;
+; -9.707  ; tx_count[30] ; ENET_DATAo[2]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.747     ;
+; -9.659  ; rx_count[28] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.011     ; 29.680     ;
+; -9.645  ; tx_count[29] ; ENET_DATAo[3]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.685     ;
+; -9.637  ; tx_count[30] ; ENET_DATAo[5]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.674     ;
+; -9.619  ; tx_count[30] ; ENET_DATAo[1]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.659     ;
+; -9.562  ; tx_count[29] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.004     ; 29.590     ;
+; -9.551  ; tx_count[29] ; ENET_DATAo[13] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.591     ;
+; -9.548  ; tx_count[29] ; ENET_DATAo[11] ; clk          ; clk         ; 20.000       ; 0.009      ; 29.589     ;
+; -9.546  ; tx_count[29] ; ENET_DATAo[9]  ; clk          ; clk         ; 20.000       ; 0.009      ; 29.587     ;
+; -9.542  ; tx_count[29] ; ENET_DATAo[15] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.582     ;
+; -9.540  ; tx_count[29] ; ENET_DATAo[14] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.580     ;
+; -9.513  ; tx_count[30] ; ENET_DATAo[3]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.553     ;
+; -9.485  ; tx_count[28] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.004     ; 29.513     ;
+; -9.472  ; tx_count[29] ; ENET_DATAo[12] ; clk          ; clk         ; 20.000       ; 0.009      ; 29.513     ;
+; -9.469  ; tx_count[29] ; ENET_DATAo[10] ; clk          ; clk         ; 20.000       ; 0.009      ; 29.510     ;
+; -9.464  ; tx_count[29] ; ENET_DATAo[8]  ; clk          ; clk         ; 20.000       ; 0.009      ; 29.505     ;
+; -9.442  ; tx_count[28] ; ENET_DATAo[6]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.479     ;
+; -9.439  ; tx_count[29] ; ENET_DATAo[7]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.476     ;
+; -9.430  ; tx_count[30] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.004     ; 29.458     ;
+; -9.419  ; tx_count[30] ; ENET_DATAo[13] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.459     ;
+; -9.416  ; tx_count[30] ; ENET_DATAo[11] ; clk          ; clk         ; 20.000       ; 0.009      ; 29.457     ;
+; -9.414  ; tx_count[30] ; ENET_DATAo[9]  ; clk          ; clk         ; 20.000       ; 0.009      ; 29.455     ;
+; -9.410  ; tx_count[30] ; ENET_DATAo[15] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.450     ;
+; -9.408  ; tx_count[30] ; ENET_DATAo[14] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.448     ;
+; -9.399  ; tx_count[28] ; ENET_DATAo[0]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.436     ;
+; -9.340  ; tx_count[30] ; ENET_DATAo[12] ; clk          ; clk         ; 20.000       ; 0.009      ; 29.381     ;
+; -9.337  ; tx_count[30] ; ENET_DATAo[10] ; clk          ; clk         ; 20.000       ; 0.009      ; 29.378     ;
+; -9.332  ; tx_count[30] ; ENET_DATAo[8]  ; clk          ; clk         ; 20.000       ; 0.009      ; 29.373     ;
+; -9.329  ; tx_count[28] ; ENET_DATAo[4]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.369     ;
+; -9.310  ; tx_count[28] ; ENET_DATAo[2]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.350     ;
+; -9.307  ; tx_count[30] ; ENET_DATAo[7]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.344     ;
+; -9.303  ; rx_count[28] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.009     ; 29.326     ;
+; -9.240  ; tx_count[28] ; ENET_DATAo[5]  ; clk          ; clk         ; 20.000       ; 0.005      ; 29.277     ;
+; -9.222  ; tx_count[28] ; ENET_DATAo[1]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.262     ;
+; -9.204  ; rx_count[29] ; RX_DATA[14]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.234     ;
+; -9.204  ; rx_count[29] ; RX_DATA[12]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.234     ;
+; -9.204  ; rx_count[29] ; RX_DATA[4]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.234     ;
+; -9.204  ; rx_count[29] ; RX_DATA[6]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.234     ;
+; -9.204  ; rx_count[29] ; RX_DATA[8]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.234     ;
+; -9.204  ; rx_count[29] ; RX_DATA[2]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.234     ;
+; -9.191  ; tx_count[28] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.006     ; 29.217     ;
+; -9.153  ; rx_count[30] ; RX_DATA[14]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.183     ;
+; -9.153  ; rx_count[30] ; RX_DATA[12]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.183     ;
+; -9.153  ; rx_count[30] ; RX_DATA[4]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.183     ;
+; -9.153  ; rx_count[30] ; RX_DATA[6]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.183     ;
+; -9.153  ; rx_count[30] ; RX_DATA[8]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.183     ;
+; -9.153  ; rx_count[30] ; RX_DATA[2]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.183     ;
+; -9.116  ; tx_count[28] ; ENET_DATAo[3]  ; clk          ; clk         ; 20.000       ; 0.008      ; 29.156     ;
+; -9.107  ; rx_count[29] ; RX_DATA[15]    ; clk          ; clk         ; 20.000       ; -0.003     ; 29.136     ;
+; -9.107  ; rx_count[29] ; RX_DATA[7]     ; clk          ; clk         ; 20.000       ; -0.003     ; 29.136     ;
+; -9.098  ; rx_count[29] ; RX_DATA[10]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.128     ;
+; -9.098  ; rx_count[29] ; RX_DATA[9]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.128     ;
+; -9.098  ; rx_count[29] ; RX_DATA[11]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.128     ;
+; -9.056  ; rx_count[30] ; RX_DATA[15]    ; clk          ; clk         ; 20.000       ; -0.003     ; 29.085     ;
+; -9.056  ; rx_count[30] ; RX_DATA[7]     ; clk          ; clk         ; 20.000       ; -0.003     ; 29.085     ;
+; -9.047  ; rx_count[30] ; RX_DATA[10]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.077     ;
+; -9.047  ; rx_count[30] ; RX_DATA[9]     ; clk          ; clk         ; 20.000       ; -0.002     ; 29.077     ;
+; -9.047  ; rx_count[30] ; RX_DATA[11]    ; clk          ; clk         ; 20.000       ; -0.002     ; 29.077     ;
+; -9.033  ; tx_count[28] ; ENET_CMD~reg0  ; clk          ; clk         ; 20.000       ; -0.004     ; 29.061     ;
+; -9.024  ; rx_count[29] ; RX_DATA[3]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.052     ;
+; -9.024  ; rx_count[29] ; RX_DATA[13]    ; clk          ; clk         ; 20.000       ; -0.004     ; 29.052     ;
+; -9.024  ; rx_count[29] ; RX_DATA[1]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.052     ;
+; -9.024  ; rx_count[29] ; RX_DATA[0]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.052     ;
+; -9.024  ; rx_count[29] ; RX_DATA[5]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.052     ;
+; -9.022  ; tx_count[28] ; ENET_DATAo[13] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.062     ;
+; -9.019  ; tx_count[28] ; ENET_DATAo[11] ; clk          ; clk         ; 20.000       ; 0.009      ; 29.060     ;
+; -9.017  ; tx_count[28] ; ENET_DATAo[9]  ; clk          ; clk         ; 20.000       ; 0.009      ; 29.058     ;
+; -9.013  ; tx_count[28] ; ENET_DATAo[15] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.053     ;
+; -9.011  ; tx_count[28] ; ENET_DATAo[14] ; clk          ; clk         ; 20.000       ; 0.008      ; 29.051     ;
+; -8.973  ; rx_count[30] ; RX_DATA[3]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.001     ;
+; -8.973  ; rx_count[30] ; RX_DATA[13]    ; clk          ; clk         ; 20.000       ; -0.004     ; 29.001     ;
+; -8.973  ; rx_count[30] ; RX_DATA[1]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.001     ;
+; -8.973  ; rx_count[30] ; RX_DATA[0]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.001     ;
+; -8.973  ; rx_count[30] ; RX_DATA[5]     ; clk          ; clk         ; 20.000       ; -0.004     ; 29.001     ;
+; -8.943  ; tx_count[28] ; ENET_DATAo[12] ; clk          ; clk         ; 20.000       ; 0.009      ; 28.984     ;
+; -8.940  ; tx_count[28] ; ENET_DATAo[10] ; clk          ; clk         ; 20.000       ; 0.009      ; 28.981     ;
+; -8.935  ; tx_count[28] ; ENET_DATAo[8]  ; clk          ; clk         ; 20.000       ; 0.009      ; 28.976     ;
+; -8.910  ; tx_count[28] ; ENET_DATAo[7]  ; clk          ; clk         ; 20.000       ; 0.005      ; 28.947     ;
+; -8.891  ; rx_count[27] ; ENET_tri       ; clk          ; clk         ; 20.000       ; -0.011     ; 28.912     ;
+; -8.787  ; tx_count[27] ; ENET_WR_N~reg0 ; clk          ; clk         ; 20.000       ; -0.006     ; 28.813     ;
+; -8.744  ; tx_count[27] ; ENET_DATAo[6]  ; clk          ; clk         ; 20.000       ; 0.003      ; 28.779     ;
+; -8.732  ; rx_count[29] ; ENET_RD_N~reg0 ; clk          ; clk         ; 20.000       ; -0.005     ; 28.759     ;
+; -8.701  ; tx_count[27] ; ENET_DATAo[0]  ; clk          ; clk         ; 20.000       ; 0.003      ; 28.736     ;
+; -8.685  ; rx_count[28] ; RX_DATA[14]    ; clk          ; clk         ; 20.000       ; -0.002     ; 28.715     ;
+; -8.685  ; rx_count[28] ; RX_DATA[12]    ; clk          ; clk         ; 20.000       ; -0.002     ; 28.715     ;
+; -8.685  ; rx_count[28] ; RX_DATA[4]     ; clk          ; clk         ; 20.000       ; -0.002     ; 28.715     ;
++---------+--------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                                                  ;
++-------+---------------------------------------------------------------------+---------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                           ; To Node                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------------+---------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; clk_count[0]                                                        ; clk_count[0]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|send_flag[0]          ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|send_flag[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[8]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[8]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[7]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[4]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[5]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|flag_point[0]         ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|flag_point[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_start[0]  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_start[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[3]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.power_up           ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.power_up           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.initialize         ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.initialize         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.send               ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.send               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; RX_VALID                                                            ; RX_VALID                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[2]                                                       ; ENET_DATAo[2]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[0]                                                       ; ENET_DATAo[0]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[7]                                                       ; ENET_DATAo[7]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[6]                                                       ; ENET_DATAo[6]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[5]                                                       ; ENET_DATAo[5]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[4]                                                       ; ENET_DATAo[4]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[3]                                                       ; ENET_DATAo[3]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; tx_req                                                              ; tx_req                                                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ENET_DATAo[1]                                                       ; ENET_DATAo[1]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; data_int[1]                                                         ; data_int[1]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; data_int[0]                                                         ; data_int[0]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; rst_req                                                             ; rst_req                                                             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|rs                       ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|rs                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[0]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[1]             ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|bindec[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|lcd_bus[1]            ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|lcd_bus[1]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.240 ; interrupt_rx[0]                                                     ; interrupt_rx[1]                                                     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[31]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[31]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_start[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; clk_count[31]                                                       ; clk_count[31]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[31]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[31]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; RX_DATA[2]                                                          ; dest_mac[18]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244 ; rst_front_temp                                                      ; rst_front                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; RX_DATA[6]                                                          ; dest_mac[22]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; interrupt_rx[1]                                                     ; rx_front_temp                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245 ; interrupt_rx[1]                                                     ; rx_front                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245 ; RX_DATA[0]                                                          ; dest_mac[16]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245 ; RX_DATA[8]                                                          ; dest_mac[24]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; interrupt_rx[1]                                                     ; tx_front                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.254 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.406      ;
+; 0.256 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|lcd_enable            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.408      ;
+; 0.256 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[4]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|global_flag_finish[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.408      ;
+; 0.257 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.initialize         ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|clk_count[31]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.259 ; RX_DATA[4]                                                          ; dest_mac[20]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.259 ; state.RESET                                                         ; state.TX                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.260 ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.send               ; IP_TO_LCD:IP_DISP|lcd_controller:LCD_contr|state.ready              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; state.RESET                                                         ; state.RX                                                            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.270 ; rst_req                                                             ; rst_trig[0]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.422      ;
+; 0.291 ; dest_mac[27]                                                        ; RX_DATA[11]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.443      ;
+; 0.298 ; dest_mac[22]                                                        ; RX_DATA[6]                                                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.450      ;
+; 0.321 ; rst_trig[1]                                                         ; rst_front                                                           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.473      ;
+; 0.326 ; RX_DATA[11]                                                         ; dest_mac[27]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.327 ; rst_trig[0]                                                         ; rst_trig[1]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.479      ;
+; 0.327 ; RX_DATA[14]                                                         ; dest_mac[30]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.479      ;
+; 0.329 ; RX_DATA[13]                                                         ; dest_mac[29]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; RX_DATA[5]                                                          ; dest_mac[21]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; RX_DATA[7]                                                          ; dest_mac[39]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.331 ; RX_DATA[10]                                                         ; dest_mac[26]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.483      ;
+; 0.331 ; RX_DATA[15]                                                         ; dest_mac[47]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.483      ;
+; 0.331 ; RX_DATA[1]                                                          ; dest_mac[17]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.483      ;
+; 0.333 ; rst_trig[1]                                                         ; rst_front_temp                                                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.485      ;
+; 0.337 ; RX_DATA[3]                                                          ; dest_mac[19]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.489      ;
+; 0.355 ; clk_count[16]                                                       ; clk_count[16]                                                       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[17]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[17]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[16]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[16]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[0]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[0]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[16]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[16]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.356 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[18]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[18]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[0]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[0]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[2]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|char[2]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; tx_count[15]                                                        ; tx_count[15]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; rx_count[15]                                                        ; rx_count[15]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; rx_count[16]                                                        ; rx_count[16]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357 ; rx_count[24]                                                        ; rx_count[24]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[30]               ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|cnt[30]               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[9]       ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[9]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[11]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[11]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[29]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[29]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[30]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[30]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[4]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[4]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[7]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[7]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[14]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[14]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[15]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[15]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[18]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[18]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[20]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[20]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[25]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[25]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[27]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[27]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[29]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[29]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[31]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|j[31]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[4]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[4]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[7]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[7]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[17]      ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|div_freq_lcd[17]      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[1]                  ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[1]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[17]                 ; IP_TO_LCD:IP_DISP|ControllerTest_TOP:LCD_user|k[17]                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; tx_count[0]                                                         ; tx_count[0]                                                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; tx_count[16]                                                        ; tx_count[16]                                                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.511      ;
++-------+---------------------------------------------------------------------+---------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                                                                    ;
++-------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                   ;
++-------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg9  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_address_reg9  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg1   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg1   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg2   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg2   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg3   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_datain_reg3   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_we_reg        ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a0~porta_we_reg        ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a10~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a10~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a11~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a11~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg0 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg1 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg1 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg2 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg2 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg3 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg3 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg4 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg4 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg5 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg5 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg6 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg6 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg7 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg7 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg8 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg8 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg9 ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_address_reg9 ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_datain_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_we_reg       ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a12~porta_we_reg       ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a13~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a13~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a14~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a14~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a15~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a15~porta_memory_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a1~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a1~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a2~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a2~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a3~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a3~porta_memory_reg0   ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg0  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg1  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg2  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg3  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg4  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg5  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg6  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg7  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg8  ;
+; 7.500 ; 10.000       ; 2.500          ; High Pulse Width ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg9  ;
+; 7.500 ; 10.000       ; 2.500          ; Low Pulse Width  ; clk   ; Rise       ; single_port_ram:RAM|altsyncram:ram_rtl_0|altsyncram_fd41:auto_generated|ram_block1a4~porta_address_reg9  ;
++-------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 3.401 ; 3.401 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 3.095 ; 3.095 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 2.884 ; 2.884 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 2.299 ; 2.299 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 2.542 ; 2.542 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 3.314 ; 3.314 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 2.326 ; 2.326 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 2.852 ; 2.852 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 3.401 ; 3.401 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 2.636 ; 2.636 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 2.646 ; 2.646 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 2.864 ; 2.864 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 2.461 ; 2.461 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 2.438 ; 2.438 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 3.158 ; 3.158 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 2.491 ; 2.491 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 2.815 ; 2.815 ; Rise       ; clk             ;
+; ENET_INT       ; clk        ; 9.565 ; 9.565 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; -1.867 ; -1.867 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; -2.326 ; -2.326 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; -1.992 ; -1.992 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; -2.173 ; -2.173 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; -2.139 ; -2.139 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; -2.105 ; -2.105 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; -2.136 ; -2.136 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; -2.132 ; -2.132 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; -2.436 ; -2.436 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; -1.893 ; -1.893 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; -1.984 ; -1.984 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; -2.063 ; -2.063 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; -1.867 ; -1.867 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; -2.047 ; -2.047 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; -1.898 ; -1.898 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; -2.187 ; -2.187 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; -2.022 ; -2.022 ; Rise       ; clk             ;
+; ENET_INT       ; clk        ; -2.453 ; -2.453 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; ENET_CLK       ; clk        ; 4.159 ; 4.159 ; Rise       ; clk             ;
+; ENET_CMD       ; clk        ; 4.556 ; 4.556 ; Rise       ; clk             ;
+; ENET_DATA[*]   ; clk        ; 4.725 ; 4.725 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 4.514 ; 4.514 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 4.502 ; 4.502 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 4.471 ; 4.471 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 4.463 ; 4.463 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 4.580 ; 4.580 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 4.632 ; 4.632 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 4.725 ; 4.725 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 4.629 ; 4.629 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 4.678 ; 4.678 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 4.242 ; 4.242 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 4.170 ; 4.170 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 4.361 ; 4.361 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 4.400 ; 4.400 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 4.272 ; 4.272 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 4.378 ; 4.378 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 4.364 ; 4.364 ; Rise       ; clk             ;
+; ENET_RD_N      ; clk        ; 5.044 ; 5.044 ; Rise       ; clk             ;
+; ENET_WR_N      ; clk        ; 4.614 ; 4.614 ; Rise       ; clk             ;
+; LCD_DATA[*]    ; clk        ; 3.992 ; 3.992 ; Rise       ; clk             ;
+;  LCD_DATA[0]   ; clk        ; 3.883 ; 3.883 ; Rise       ; clk             ;
+;  LCD_DATA[1]   ; clk        ; 3.968 ; 3.968 ; Rise       ; clk             ;
+;  LCD_DATA[2]   ; clk        ; 3.992 ; 3.992 ; Rise       ; clk             ;
+;  LCD_DATA[3]   ; clk        ; 3.988 ; 3.988 ; Rise       ; clk             ;
+;  LCD_DATA[4]   ; clk        ; 3.897 ; 3.897 ; Rise       ; clk             ;
+;  LCD_DATA[5]   ; clk        ; 3.893 ; 3.893 ; Rise       ; clk             ;
+; LCD_EN         ; clk        ; 3.979 ; 3.979 ; Rise       ; clk             ;
+; LCD_RS         ; clk        ; 3.895 ; 3.895 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; ENET_CLK       ; clk        ; 4.159 ; 4.159 ; Rise       ; clk             ;
+; ENET_CMD       ; clk        ; 4.556 ; 4.556 ; Rise       ; clk             ;
+; ENET_DATA[*]   ; clk        ; 4.170 ; 4.170 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 4.514 ; 4.514 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 4.502 ; 4.502 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 4.471 ; 4.471 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 4.463 ; 4.463 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 4.580 ; 4.580 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 4.632 ; 4.632 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 4.725 ; 4.725 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 4.629 ; 4.629 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 4.678 ; 4.678 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 4.242 ; 4.242 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 4.170 ; 4.170 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 4.361 ; 4.361 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 4.400 ; 4.400 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 4.272 ; 4.272 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 4.378 ; 4.378 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 4.364 ; 4.364 ; Rise       ; clk             ;
+; ENET_RD_N      ; clk        ; 5.044 ; 5.044 ; Rise       ; clk             ;
+; ENET_WR_N      ; clk        ; 4.614 ; 4.614 ; Rise       ; clk             ;
+; LCD_DATA[*]    ; clk        ; 3.883 ; 3.883 ; Rise       ; clk             ;
+;  LCD_DATA[0]   ; clk        ; 3.883 ; 3.883 ; Rise       ; clk             ;
+;  LCD_DATA[1]   ; clk        ; 3.968 ; 3.968 ; Rise       ; clk             ;
+;  LCD_DATA[2]   ; clk        ; 3.992 ; 3.992 ; Rise       ; clk             ;
+;  LCD_DATA[3]   ; clk        ; 3.988 ; 3.988 ; Rise       ; clk             ;
+;  LCD_DATA[4]   ; clk        ; 3.897 ; 3.897 ; Rise       ; clk             ;
+;  LCD_DATA[5]   ; clk        ; 3.893 ; 3.893 ; Rise       ; clk             ;
+; LCD_EN         ; clk        ; 3.979 ; 3.979 ; Rise       ; clk             ;
+; LCD_RS         ; clk        ; 3.895 ; 3.895 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Output Enable Times                                                       ;
++----------------+------------+-------+------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 5.272 ;      ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 5.764 ;      ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 5.764 ;      ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 5.672 ;      ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 5.672 ;      ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 5.571 ;      ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 5.571 ;      ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 5.463 ;      ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 5.272 ;      ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 6.018 ;      ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 6.013 ;      ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 5.909 ;      ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 5.909 ;      ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 5.919 ;      ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 5.919 ;      ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 5.884 ;      ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 5.884 ;      ; Rise       ; clk             ;
++----------------+------------+-------+------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Output Enable Times                                               ;
++----------------+------------+-------+------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 5.272 ;      ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 5.764 ;      ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 5.764 ;      ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 5.672 ;      ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 5.672 ;      ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 5.571 ;      ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 5.571 ;      ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 5.463 ;      ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 5.272 ;      ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 6.018 ;      ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 6.013 ;      ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 5.909 ;      ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 5.909 ;      ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 5.919 ;      ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 5.919 ;      ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 5.884 ;      ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 5.884 ;      ; Rise       ; clk             ;
++----------------+------------+-------+------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Output Disable Times                                                               ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; Data Port      ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 5.272     ;           ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 5.764     ;           ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 5.764     ;           ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 5.672     ;           ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 5.672     ;           ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 5.571     ;           ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 5.571     ;           ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 5.463     ;           ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 5.272     ;           ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 6.018     ;           ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 6.013     ;           ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 5.909     ;           ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 5.909     ;           ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 5.919     ;           ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 5.919     ;           ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 5.884     ;           ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 5.884     ;           ; Rise       ; clk             ;
++----------------+------------+-----------+-----------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                       ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; Data Port      ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++----------------+------------+-----------+-----------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 5.272     ;           ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 5.764     ;           ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 5.764     ;           ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 5.672     ;           ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 5.672     ;           ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 5.571     ;           ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 5.571     ;           ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 5.463     ;           ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 5.272     ;           ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 6.018     ;           ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 6.013     ;           ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 5.909     ;           ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 5.909     ;           ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 5.919     ;           ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 5.919     ;           ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 5.884     ;           ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 5.884     ;           ; Rise       ; clk             ;
++----------------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -50.783   ; 0.215 ; N/A      ; N/A     ; 7.500               ;
+;  clk             ; -50.783   ; 0.215 ; N/A      ; N/A     ; 7.500               ;
+; Design-wide TNS  ; -2176.59  ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; -2176.590 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; 6.629  ; 6.629  ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 5.999  ; 5.999  ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 5.570  ; 5.570  ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 4.265  ; 4.265  ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 4.795  ; 4.795  ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 6.474  ; 6.474  ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 4.304  ; 4.304  ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 5.524  ; 5.524  ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 6.629  ; 6.629  ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 4.954  ; 4.954  ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 5.034  ; 5.034  ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 5.515  ; 5.515  ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 4.612  ; 4.612  ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 4.546  ; 4.546  ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 6.125  ; 6.125  ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 4.582  ; 4.582  ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 5.484  ; 5.484  ; Rise       ; clk             ;
+; ENET_INT       ; clk        ; 20.854 ; 20.854 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; ENET_DATA[*]   ; clk        ; -1.867 ; -1.867 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; -2.326 ; -2.326 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; -1.992 ; -1.992 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; -2.173 ; -2.173 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; -2.139 ; -2.139 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; -2.105 ; -2.105 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; -2.136 ; -2.136 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; -2.132 ; -2.132 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; -2.436 ; -2.436 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; -1.893 ; -1.893 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; -1.984 ; -1.984 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; -2.063 ; -2.063 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; -1.867 ; -1.867 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; -2.047 ; -2.047 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; -1.898 ; -1.898 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; -2.187 ; -2.187 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; -2.022 ; -2.022 ; Rise       ; clk             ;
+; ENET_INT       ; clk        ; -2.453 ; -2.453 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; ENET_CLK       ; clk        ; 7.511 ; 7.511 ; Rise       ; clk             ;
+; ENET_CMD       ; clk        ; 8.194 ; 8.194 ; Rise       ; clk             ;
+; ENET_DATA[*]   ; clk        ; 8.616 ; 8.616 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 8.158 ; 8.158 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 8.125 ; 8.125 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 8.076 ; 8.076 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 8.066 ; 8.066 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 8.318 ; 8.318 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 8.404 ; 8.404 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 8.616 ; 8.616 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 8.295 ; 8.295 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 8.412 ; 8.412 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 7.600 ; 7.600 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 7.396 ; 7.396 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 7.867 ; 7.867 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 7.927 ; 7.927 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 7.657 ; 7.657 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 7.897 ; 7.897 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 7.857 ; 7.857 ; Rise       ; clk             ;
+; ENET_RD_N      ; clk        ; 9.336 ; 9.336 ; Rise       ; clk             ;
+; ENET_WR_N      ; clk        ; 8.376 ; 8.376 ; Rise       ; clk             ;
+; LCD_DATA[*]    ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
+;  LCD_DATA[0]   ; clk        ; 6.903 ; 6.903 ; Rise       ; clk             ;
+;  LCD_DATA[1]   ; clk        ; 7.077 ; 7.077 ; Rise       ; clk             ;
+;  LCD_DATA[2]   ; clk        ; 7.105 ; 7.105 ; Rise       ; clk             ;
+;  LCD_DATA[3]   ; clk        ; 7.097 ; 7.097 ; Rise       ; clk             ;
+;  LCD_DATA[4]   ; clk        ; 6.934 ; 6.934 ; Rise       ; clk             ;
+;  LCD_DATA[5]   ; clk        ; 6.921 ; 6.921 ; Rise       ; clk             ;
+; LCD_EN         ; clk        ; 7.103 ; 7.103 ; Rise       ; clk             ;
+; LCD_RS         ; clk        ; 6.936 ; 6.936 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; ENET_CLK       ; clk        ; 4.159 ; 4.159 ; Rise       ; clk             ;
+; ENET_CMD       ; clk        ; 4.556 ; 4.556 ; Rise       ; clk             ;
+; ENET_DATA[*]   ; clk        ; 4.170 ; 4.170 ; Rise       ; clk             ;
+;  ENET_DATA[0]  ; clk        ; 4.514 ; 4.514 ; Rise       ; clk             ;
+;  ENET_DATA[1]  ; clk        ; 4.502 ; 4.502 ; Rise       ; clk             ;
+;  ENET_DATA[2]  ; clk        ; 4.471 ; 4.471 ; Rise       ; clk             ;
+;  ENET_DATA[3]  ; clk        ; 4.463 ; 4.463 ; Rise       ; clk             ;
+;  ENET_DATA[4]  ; clk        ; 4.580 ; 4.580 ; Rise       ; clk             ;
+;  ENET_DATA[5]  ; clk        ; 4.632 ; 4.632 ; Rise       ; clk             ;
+;  ENET_DATA[6]  ; clk        ; 4.725 ; 4.725 ; Rise       ; clk             ;
+;  ENET_DATA[7]  ; clk        ; 4.629 ; 4.629 ; Rise       ; clk             ;
+;  ENET_DATA[8]  ; clk        ; 4.678 ; 4.678 ; Rise       ; clk             ;
+;  ENET_DATA[9]  ; clk        ; 4.242 ; 4.242 ; Rise       ; clk             ;
+;  ENET_DATA[10] ; clk        ; 4.170 ; 4.170 ; Rise       ; clk             ;
+;  ENET_DATA[11] ; clk        ; 4.361 ; 4.361 ; Rise       ; clk             ;
+;  ENET_DATA[12] ; clk        ; 4.400 ; 4.400 ; Rise       ; clk             ;
+;  ENET_DATA[13] ; clk        ; 4.272 ; 4.272 ; Rise       ; clk             ;
+;  ENET_DATA[14] ; clk        ; 4.378 ; 4.378 ; Rise       ; clk             ;
+;  ENET_DATA[15] ; clk        ; 4.364 ; 4.364 ; Rise       ; clk             ;
+; ENET_RD_N      ; clk        ; 5.044 ; 5.044 ; Rise       ; clk             ;
+; ENET_WR_N      ; clk        ; 4.614 ; 4.614 ; Rise       ; clk             ;
+; LCD_DATA[*]    ; clk        ; 3.883 ; 3.883 ; Rise       ; clk             ;
+;  LCD_DATA[0]   ; clk        ; 3.883 ; 3.883 ; Rise       ; clk             ;
+;  LCD_DATA[1]   ; clk        ; 3.968 ; 3.968 ; Rise       ; clk             ;
+;  LCD_DATA[2]   ; clk        ; 3.992 ; 3.992 ; Rise       ; clk             ;
+;  LCD_DATA[3]   ; clk        ; 3.988 ; 3.988 ; Rise       ; clk             ;
+;  LCD_DATA[4]   ; clk        ; 3.897 ; 3.897 ; Rise       ; clk             ;
+;  LCD_DATA[5]   ; clk        ; 3.893 ; 3.893 ; Rise       ; clk             ;
+; LCD_EN         ; clk        ; 3.979 ; 3.979 ; Rise       ; clk             ;
+; LCD_RS         ; clk        ; 3.895 ; 3.895 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clk        ; clk      ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clk        ; clk      ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 245   ; 245  ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 44    ; 44   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jan 11 16:27:30 2023
+Info: Command: quartus_sta Ethernet -c Ethernet
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'Ethernet.sdc'
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is -50.783
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -50.783     -2176.590 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     7.500         0.000 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is -10.178
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -10.178      -400.536 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.500
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     7.500         0.000 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info (144001): Generated suppressed messages file C:/My_Designs/DZ_eth_0/output_files/Ethernet.sta.smsg
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Wed Jan 11 16:27:35 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
+
+
++-----------------------------------------------+
+; TimeQuest Timing Analyzer Suppressed Messages ;
++-----------------------------------------------+
+The suppressed messages can be found in C:/My_Designs/DZ_eth_0/output_files/Ethernet.sta.smsg.
+
+

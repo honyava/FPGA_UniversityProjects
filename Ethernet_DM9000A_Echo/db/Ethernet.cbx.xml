@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Ethernet">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DM9000A_if|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_dem.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DM9000A_if|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_dem.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DM9000A_if|single_port_ram:RAM|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_fd41.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

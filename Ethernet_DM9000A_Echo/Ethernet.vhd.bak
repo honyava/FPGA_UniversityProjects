@@ -1,0 +1,57 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity Ethernet is
+    
+    port (
+        clk     : in std_logic;
+        --reset_n : in std_logic;     
+        
+        ENET_RD_N : out   std_logic;
+        ENET_WR_N : out   std_logic;
+        ENET_CS_N : out   std_logic;
+        ENET_CMD  : out   std_logic;
+        ENET_INT  : in    std_logic := '0';
+        ENET_RESET_N : out std_logic := '1';
+        ENET_CLK  : out   std_logic;
+        ENET_DATA : inout std_logic_vector(15 downto 0)
+        );        
+    
+end Ethernet;    
+architecture rtl2 of Ethernet is 
+signal enet_int2 : std_logic;    
+begin
+--    enet_int2 <= ENET_INT;
+--    DM_CON : entity work.DM9000A_model
+--    port map (
+--    clk          => clk,
+--    reset_n      => reset_n,
+--    DM_INT       => ENET_INT2,
+--    DM_IOR_n     => ENET_RD_N,
+--    DM_IOW_n     => ENET_WR_N,
+--    DM_CS_n      => ENET_CS_N,
+--    DM_CMD       => ENET_CMD,
+--    DM_CLK       => ENET_CLK,
+--    PWRST_n      => ENET_RESET_N,
+--    DM_SD        => ENET_DATA
+--    
+--    );    
+    
+    DO_Assign : process (clk, ENET_RESET_N)
+    begin  -- process DO_TEST
+        if ENET_RESET_N = '0' then               -- asynchronous reset (active low)
+            ENET_CMD 	<=	'0';
+            ENET_RD_N 	<=	'1';
+            ENET_WR_N 	<=	'1';
+            ENET_CS_N 	<=	'1';    
+        elsif rising_edge(clk) then   -- for OSC 50MHz
+            ENET_CLK <= not ENET_CLK;
+            ENET_CMD 	<=	'1';
+            ENET_RD_N 	<=	'0';
+            ENET_WR_N 	<=	'0';
+            ENET_CS_N 	<=	'0';            
+            
+        end if;
+    end process DO_Assign;
+end rtl2;
